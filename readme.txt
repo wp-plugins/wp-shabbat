@@ -1,13 +1,13 @@
 === WP-Shabbat ===
-Contributors: DrMosko
+Contributors: drmosko
 Tags: 
 Requires at least: 3.7.0
 Tested up to: 3.7.0
-Stable tag: 0.01
+Stable tag: 0.02
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Site closing on Shabbat and Holidays by identifying the address of the user IP and close to 40 km
+Close site on Shabbat and Holidays by identifying the address of the user IP and close to 40 km
 
 
 
@@ -24,6 +24,7 @@ Features include:
 * Ip databse is updated automatically every month. (est. size : 15Mb)
 * All search engine bots allowed at all times. (SEO-Friendly)
 * plugin languages : English,Hebrew.
+* plugin will generate on fly page with your template for visitor to come back later.
 
 Notes:
 
@@ -52,3 +53,9 @@ Notes:
 == Screenshots ==
 
 1. WP-Shabbat Setting Page.
+2. WP-Shabbat on fly page (with Twenty Thirteen template).
+
+== Changelog ==
+
+= 0.02 =
+* check if template base files exists

@@ -13,7 +13,23 @@ function wp_shabbat_closed_content() {
    return $content;
 }
 function wp_shabbat_closed_template() {
-  include(TEMPLATEPATH."/index.php");
+	
+     
+	if   ('' != (locate_template( 'page.php' )))  {
+		include(TEMPLATEPATH.'/page.php');
+	}else {
+		if  ('' != (locate_template( 'index.php' )))  {
+			include(TEMPLATEPATH.'/index.php');
+		}else {
+			if  ('' != (locate_template( 'single.php' )))  {
+				include(TEMPLATEPATH.'/single.php');
+			}else {
+				if  ('' != (locate_template( 'home.php' )))  {
+					include(TEMPLATEPATH.'/home.php');
+					}
+				}
+			}	
+		}
   exit;
 }
 if ($_GET['WP-Shabbat'] == "Shabbat-Closed-Page") {
