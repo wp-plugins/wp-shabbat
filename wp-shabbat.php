@@ -3,7 +3,7 @@
 Plugin Name: wp-shabbat
 Plugin URI: www.dossihost.net
 Description: Site closing on Saturday and Holidays by identifying the address of the user IP and close to 40 km
-Version: 0.01
+Version: 0.02
 Author: DrMosko
 Author URI: www.dossihost.net
 
