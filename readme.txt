@@ -55,6 +55,7 @@ Notes:
 
 1. WP-Shabbat Setting Page.
 2. WP-Shabbat on fly page (with Twenty Thirteen template).
+3. Confirm of Http header status 503.
 
 == Changelog ==
 = 0.03 =

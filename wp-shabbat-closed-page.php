@@ -11,7 +11,7 @@ function wp_shabbat_status_header() {
 		$protocol = 'HTTP/1.0';
 	header( "$protocol 503 Service Unavailable", true, 503 );
 	header( 'Content-Type: text/html; charset=utf-8' );
-	header( 'Retry-After: 600' );
+	
 	 get_header();
 ?>
 	
