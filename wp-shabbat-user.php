@@ -52,17 +52,6 @@ function get_client_ip()
 
         $ipaddress = 'UNKNOWN';
 
- 
-
-    if( isset( $_GET["ip"] ) ) 
-
-        $ipaddress = $_GET["ip"];
-
-    elseif( isset( $_GET["host"] ) )
-
-        $ipaddress = gethostbyname( $_GET["host"] );
-
-
 
     return $ipaddress;
 

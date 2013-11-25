@@ -71,82 +71,6 @@ function havdala($user_time,$user_timezone_offset,$record) {
 }
 
 
-/*****************
-
-cheack if the user is bot or human
-
-**************************/
-
-function isBot()
-
-{
-
-		/*************
-
-		 create a search bots spiders list into array from txt.file http://www.robotstxt.org/db/all.txt
-
-		***********/
-
-		$searchthis = "robot-id";
-
-		$matches = array();
-
-
-
-		$handle = @fopen(plugin_dir_path( __FILE__ )."sebotdb/all.txt", "r");
-
-		if ($handle)
-
-		{
-
-			while (!feof($handle))
-
-			{
-
-				$buffer = fgets($handle);
-
-				if(strpos($buffer, $searchthis) !== FALSE)
-
-					$matches[] = $buffer;
-
-			}
-
-			fclose($handle);
-
-		}
-
-		//clean robot-id: from the array
-
-		$bots= str_replace("robot-id:","", $matches );
-
-	
- 
-
-     foreach($bots as $bot)
-
-    {
-
-            if(strpos($_SERVER['HTTP_USER_AGENT'], $bot) !== false)
-
-                return true;
-
-				
-
-    }
-
- 
-
-    return false;
-
-}
-
-
-
-
-
-
-
-
 /************************
 
 	hebrew date
@@ -223,7 +147,6 @@ $exitTime = havdala($user_time,$user_timezone_offset,$record);
 
 
 
-if (!isBot()) {
 
     if ($record->country_code3 == 'ISR' )  // if the user from israel
 	{	
@@ -249,7 +172,8 @@ if (!isBot()) {
 			if ($user_localday == 'Fri') {
 				if ( $user_time > $enterTime ){ // check time
 					header('Location: '. $redirect .__('Shabbat','WP-Shabbat').'&opentime='.__('tommorow at ','WP-Shabbat').date('H:i',$exitTime));    // redirect to url
-					//echo ' shabas israel Fri<br/>';
+					
+					
 					
 					
 				}		
@@ -257,7 +181,7 @@ if (!isBot()) {
 			if ($user_localday == 'Sat') {
 				if ( $user_time < $exitTime ){ // check time
 					header('Location: '. $redirect .__('Shabbat','WP-Shabbat').'&opentime='.__('at ','WP-Shabbat').date('H:i',$exitTime));    // redirect to url
-					//echo ' shabas israel Sat<br/>';
+					
 					
 				}	
 			}
@@ -292,21 +216,21 @@ if (!isBot()) {
 			if ($user_localday == 'Fri') {
 				if ($user_time > $enterTime){ // check time
 					header('Location: '. $redirect .__('Shabbat','WP-Shabbat').'&opentime='.__('tommorow at ','WP-Shabbat').date('H:i',$exitTime));    // redirect to url
-					//echo 'Fri<br/>';
+					
 					
 				}		
 			}
 			if ($user_localday == 'Sat') {
 				if ($user_time < $exitTime){ // check time
 					header('Location: '. $redirect .__('Shabbat','WP-Shabbat').'&opentime='.__('at ','WP-Shabbat').date('H:i',$exitTime));    // redirect to url
-					//echo 'Sat<br/>';
+					
 					
 				}	
 			}
 		}	
 	}
 	
-}
+
 
 
 

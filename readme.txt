@@ -3,7 +3,7 @@ Contributors: drmosko
 Tags: 
 Requires at least: 3.7.0
 Tested up to: 3.7.0
-Stable tag: 0.02
+Stable tag: 0.03
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -22,7 +22,7 @@ Features include:
 * close the site by setting the Shabbat and holiday enter time in minutes when the minimum is 20 minutes.
 * close the site by setting the Shabbat and holiday exit time in temporary minutes from 18 minutes to 72 minutes.
 * Ip databse is updated automatically every month. (est. size : 15Mb)
-* All search engine bots allowed at all times. (SEO-Friendly)
+* search engine bots get http header 503. (SEO-Friendly)
 * plugin languages : English,Hebrew.
 * plugin will generate on fly page with your template for visitor to come back later.
 
@@ -56,6 +56,10 @@ Notes:
 2. WP-Shabbat on fly page (with Twenty Thirteen template).
 
 == Changelog ==
+= 0.03 =
+* closed page set to 503 http like google advise "http://productforums.google.com/forum/#!topic/webmasters/theUs8RCvDg/discussion"
+and "http://www.seroundtable.com/archives/020729.html"
+* remove bot cloack
 
 = 0.02 =
 * check if template base files exists
