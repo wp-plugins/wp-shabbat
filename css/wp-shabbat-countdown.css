@@ -1,0 +1,10 @@
+#countdown_time {
+	position: fixed;
+	bottom: 10px;
+	left: 10px;
+	background-color: #FFF;
+	color: #696969;
+	border-radius: 5px;
+	padding: 5px;
+	text-align: center;
+}
